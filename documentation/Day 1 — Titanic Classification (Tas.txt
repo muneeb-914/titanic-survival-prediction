@@ -1,0 +1,33 @@
+Day 1 — Titanic Classification (Task 1)
+What we did:
+1. Environment Setup
+
+Installed Python libraries: pandas, numpy, matplotlib, seaborn, scikit-learn
+Set up Jupyter Notebook inside VS Code
+Created titanic_task1.ipynb working file
+
+2. Downloaded Dataset
+
+Titanic dataset from Kaggle (891 rows, 12 columns)
+Stored in raw_data/Titanic-Dataset.csv
+
+3. Loaded & Explored Data
+
+Imported all required libraries
+Loaded CSV into a pandas DataFrame
+Confirmed shape: 891 rows × 12 columns
+Columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked
+
+4. Missing Value Analysis
+
+Age: 177 missing (19.8%) → will fill with median
+Cabin: 687 missing (77%) → will drop this column
+Embarked: 2 missing (0.2%) → will fill with mode
+
+Tomorrow — Day 2:
+
+Data cleaning (handle missing values)
+Feature engineering (convert Sex, Embarked to numbers)
+Train the Random Forest model
+Evaluate accuracy + confusion matrix
+Generate all charts/screenshots for report
