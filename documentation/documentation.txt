@@ -1,0 +1,79 @@
+Titanic Survival Classification — Project Documentation
+Project: Task 1 — Titanic Survival Classification
+Internship: Arch Technologies — Data Science
+Name: Muneeb Ur Rehman
+Email: mu181842@gmail.com
+
+Environment Setup
+
+Installed Python libraries: pandas, numpy, matplotlib, seaborn, scikit-learn
+Set up Jupyter Notebook inside VS Code
+Created titanic_task1.ipynb working file
+
+
+Dataset
+
+Source: Kaggle — Titanic Dataset
+Shape: 891 rows × 12 columns
+Columns: PassengerId, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked
+Stored in raw_data/Titanic-Dataset.csv
+
+
+Step 1 — Exploratory Data Analysis
+
+Loaded CSV into a pandas DataFrame
+Confirmed shape: 891 rows × 12 columns
+Missing value analysis:
+
+Age: 177 missing (19.8%)
+Cabin: 687 missing (77%)
+Embarked: 2 missing (0.2%)
+
+
+
+
+Step 2 — Data Cleaning
+
+Filled Age missing values with median
+Dropped Cabin column (77% missing, not useful)
+Filled Embarked missing values with mode
+Result: Zero missing values across all columns ✅
+
+
+Step 3 — Feature Engineering
+
+Converted Sex: male→0, female→1
+Converted Embarked: S→0, C→1, Q→2
+Dropped irrelevant columns: PassengerId, Name, Ticket
+
+
+Step 4 — Model Training
+
+Algorithm: Random Forest Classifier (100 trees)
+Split: 80% train (712 samples), 20% test (179 samples)
+
+
+Step 5 — Model Evaluation
+
+✅ Accuracy: 82.68%
+Precision: 0.84 (Not Survived), 0.81 (Survived)
+Recall: 0.88 (Not Survived), 0.76 (Survived)
+Confusion Matrix: 92 + 56 correct, 13 + 18 incorrect
+
+
+Step 6 — Feature Importance
+
+Top survival predictors:
+
+Fare: 0.27
+Sex: 0.27
+Age: 0.26
+Pclass: 0.08
+
+
+
+
+Key Finding
+Fare, Sex, and Age were the strongest predictors of survival — consistent with the historical "women and children first" evacuation protocol and class-based lifeboat access.
+
+Status: TASK 1 ✅ COMPLETE
